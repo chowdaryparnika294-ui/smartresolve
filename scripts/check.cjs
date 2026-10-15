@@ -1,0 +1,1 @@
+const fs=require('fs');console.log('SmartResolve setup complete.');console.log(fs.existsSync('backend/.env')?'Backend .env present':'Copy backend/.env.example to backend/.env and configure MongoDB/JWT.');
