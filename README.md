@@ -53,4 +53,12 @@ Connect GitHub repository, create Blueprint from `render.yaml` or create backend
 - The optional classifier must be trained with real curated data; no claimed accuracy until evaluation is run.
 
 ## Tests
-`npm test` runs included backend smoke/static tests. `npm run build` checks frontend compilation. Integration testing against MongoDB requires your Atlas credentials; manual role workflows should be tested after seeding.
+`npm test` runs backend logic tests. `npm run build` checks frontend compilation.
+
+Run the database-backed API/security regression suite against a local MongoDB:
+```bash
+TEST_MONGODB_URI=mongodb://127.0.0.1:27017 npm run test:integration
+```
+The suite requires an explicit local database URI, creates a uniquely named test database, and deletes only that database afterward. It does not need Atlas credentials or demo seeding. It tests registration/login, complaint submission and resolution, role changes, access restrictions, duplicate reports, search validation, uploads, and SLA reporting.
+
+See [the backend audit](BACKEND_AUDIT.md) for findings, fixes, and remaining production work.
