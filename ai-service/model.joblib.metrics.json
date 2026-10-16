@@ -1,0 +1,18 @@
+{
+  "accuracy": 1.0,
+  "macro_f1": 1.0,
+  "macro_precision": 1.0,
+  "macro_recall": 1.0,
+  "labels": [
+    "Education",
+    "Electricity",
+    "Finance & Payments",
+    "Healthcare",
+    "Other",
+    "Public Safety",
+    "Roads & Infrastructure",
+    "Sanitation",
+    "Technical Support",
+    "Water Supply"
+  ]
+}
